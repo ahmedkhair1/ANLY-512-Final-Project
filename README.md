@@ -1,4 +1,4 @@
-# ANLY-512-Final-Project: Predicting Airbnb Rental Prices using Statistical Learning: A Data-Driven Approach 
+# ANLY 512 Final Project: Predicting Airbnb Rental Prices using Statistical Learning: A Data-Driven Approach 
 
 ![image](https://user-images.githubusercontent.com/112729265/235756891-e42523ed-72c8-4e27-9ca1-e1415e247f6f.png)
 
