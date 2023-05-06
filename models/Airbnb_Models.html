@@ -1,0 +1,5519 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>ANLY 512 Project Models</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="Airbnb_Models_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Airbnb_Models_files/libs/quarto-html/quarto.js"></script>
+<script src="Airbnb_Models_files/libs/quarto-html/popper.min.js"></script>
+<script src="Airbnb_Models_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Airbnb_Models_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Airbnb_Models_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Airbnb_Models_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Airbnb_Models_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Airbnb_Models_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Airbnb_Models_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+<script src="Airbnb_Models_files/libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="Airbnb_Models_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">ANLY 512 Project Models</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Using the Airbnb dataset that was compiled together using quarterly data for 2022. These quartely updates include data as of the following day March 16th, June 8th, September 12th, and December 15th.</p>
+<p>Data Source: http://insideairbnb.com/get-the-data</p>
+<p>Data Dictionary:</p>
+<ul>
+<li>Price: Price listing _ neighbourhood: area ZIP codes</li>
+<li>latitude: Uses the World Geodetic System (WGS84) projection for latitude and longitude.</li>
+<li>longitude: Uses the World Geodetic System (WGS84) projection for latitude and longitude.</li>
+<li>room_type: All homes are grouped into the following three room types:</li>
+</ul>
+<p>Entire place Private room Shared room</p>
+<ul>
+<li>price: daily price in local currency</li>
+<li>minimum_nights: minimum number of night stay for the listing (calendar rules may be different)</li>
+<li>number_of_reviews: The number of reviews the listing has</li>
+<li>reviews_per_month: The number of reviews the listing has over the lifetime of the listing</li>
+<li>calculated_host_listings_count: The number of Entire home/apt listings the host has in the current scrape, in the city/region geography</li>
+<li>availability_365: The availability of the listing 365 days in the future as determined by the calendar. Note a listing may not be available because it has been booked by a guest or blocked by the host.</li>
+<li>number_of_reviews_ltm: The number of reviews the listing has (in the last 12 months)</li>
+<li>time_since_last_review: Time in minutes since last review was posted</li>
+<li>log_price: Log function of price module</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(ISLR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: ISLR</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(MASS)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: MASS</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(glmnet)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: glmnet</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: Matrix</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loaded glmnet 4.1-4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(leaps)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: leaps</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># library</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaps)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: ggplot2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: lattice</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(corrplot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>corrplot 0.92 loaded</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggfortify)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2
+──</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>✔ tibble  3.1.8     ✔ dplyr   1.0.9
+✔ tidyr   1.2.0     ✔ stringr 1.5.0
+✔ purrr   1.0.1     ✔ forcats 0.5.1
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ purrr::compose() masks flextable::compose()
+✖ tidyr::expand()  masks Matrix::expand()
+✖ dplyr::filter()  masks stats::filter()
+✖ dplyr::lag()     masks stats::lag()
+✖ purrr::lift()    masks caret::lift()
+✖ tidyr::pack()    masks Matrix::pack()
+✖ dplyr::select()  masks MASS::select()
+✖ tidyr::unpack()  masks Matrix::unpack()</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zoo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'zoo'
+
+The following objects are masked from 'package:base':
+
+    as.Date, as.Date.numeric</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reshape2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'reshape2'
+
+The following object is masked from 'package:tidyr':
+
+    smiths</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'data.table'
+
+The following objects are masked from 'package:reshape2':
+
+    dcast, melt
+
+The following objects are masked from 'package:lubridate':
+
+    hour, isoweek, mday, minute, month, quarter, second, wday, week,
+    yday, year
+
+The following objects are masked from 'package:dplyr':
+
+    between, first, last
+
+The following object is masked from 'package:purrr':
+
+    transpose</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(klaR)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(feather)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(yardstick)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>For binary classification, the first factor level is assumed to be the event.
+Use the argument `event_level = "second"` to alter this as needed.
+
+Attaching package: 'yardstick'
+
+The following object is masked from 'package:readr':
+
+    spec
+
+The following objects are masked from 'package:caret':
+
+    precision, recall, sensitivity, specificity</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(splines)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ISLR)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nnet)</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glmnet)</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(boot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'boot'
+
+The following object is masked from 'package:lattice':
+
+    melanoma</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'sparkline'</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"pacman"</span>)) <span class="fu">install.packages</span>(<span class="st">"pacman"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: pacman</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(<span class="st">"weights"</span>, <span class="st">"interactions"</span>, <span class="st">"cjoint"</span>, <span class="st">"plm"</span>, <span class="st">"interactions"</span>, <span class="st">"jtools"</span>, <span class="st">"stats"</span>, <span class="st">"miceadds"</span>, <span class="st">"broom"</span>, <span class="st">"RColorBrewer"</span>, <span class="st">"ggstatsplot"</span>, <span class="st">"ggpubr"</span>, <span class="st">"stargazer"</span>, <span class="st">"sandwich"</span>, <span class="st">"hrbrthemes"</span>, <span class="st">"rms"</span>, <span class="st">"interplot"</span>, <span class="st">"coefplot"</span>, <span class="st">"gmodels"</span>, <span class="st">"car"</span>, <span class="st">"lattice"</span>,<span class="st">"foreign"</span>, <span class="st">"ggplot2"</span>, <span class="st">"MASS"</span>, <span class="st">"Hmisc"</span>, <span class="st">"reshape2"</span>, <span class="st">"oddsratio"</span>, <span class="st">"tidyr"</span>, <span class="st">"psych"</span>, <span class="st">"dplyr"</span>, <span class="st">"tidyverse"</span>, <span class="st">"cjoint"</span>, <span class="st">"ISLR"</span>,<span class="st">"ISLR2"</span>,<span class="st">"kableExtra"</span>,<span class="st">"ggExtra"</span>,<span class="st">"gridExtra"</span>)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">tidy.opts=</span><span class="fu">list</span>(<span class="at">width.cutoff=</span><span class="dv">60</span>),<span class="at">tidy=</span><span class="cn">TRUE</span>,<span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>def.chunk.hook  <span class="ot">&lt;-</span> knitr<span class="sc">::</span>knit_hooks<span class="sc">$</span><span class="fu">get</span>(<span class="st">"chunk"</span>)</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>knit_hooks<span class="sc">$</span><span class="fu">set</span>(<span class="at">chunk =</span> <span class="cf">function</span>(x, options) {</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">def.chunk.hook</span>(x, options)</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span>(options<span class="sc">$</span>size <span class="sc">!=</span> <span class="st">"normalsize"</span>, <span class="fu">paste0</span>(<span class="st">"</span><span class="sc">\n</span><span class="st"> </span><span class="sc">\\</span><span class="st">"</span>, options<span class="sc">$</span>size,<span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>, x, <span class="st">"</span><span class="sc">\n\n</span><span class="st"> </span><span class="sc">\\</span><span class="st">normalsize"</span>), x)</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Search for all files in the input folder, import and combine</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"clean_airbnb.csv"</span>)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop columns with text data</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>drop <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"X"</span>, <span class="st">"id"</span>, <span class="st">"name"</span>, <span class="st">"host_id"</span>, <span class="st">"host_name"</span>, <span class="st">"neighbourhood_group"</span>,</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"last_review"</span>, <span class="st">"license"</span>)</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>alpha<span class="sc">$</span>neighbourhood <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(alpha<span class="sc">$</span>neighbourhood)</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">=</span> alpha[, <span class="sc">!</span>(<span class="fu">names</span>(alpha) <span class="sc">%in%</span> drop)]</span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  neighbourhood latitude longitude       room_type price minimum_nights
+1         78702 30.26057 -97.73441 Entire home/apt   111              2
+2         78729 30.45697 -97.78422    Private room    39              1
+3         78704 30.24885 -97.73587 Entire home/apt    66             30
+4         78704 30.26034 -97.76487 Entire home/apt   149              3
+5         78741 30.23466 -97.73682 Entire home/apt    44              3
+6         78702 30.26543 -97.71338 Entire home/apt   750              4
+  number_of_reviews reviews_per_month calculated_host_listings_count
+1               601              3.72                              1
+2               264              1.78                              1
+3               118              0.78                              1
+4               278              2.12                              1
+5                48              0.32                              1
+6               124              0.99                              1
+  availability_365 number_of_reviews_ltm       date time_since_last_review
+1              309                    44 2022-06-08                     14
+2               58                     1 2022-06-08                    340
+3                0                     2 2022-06-08                      8
+4               90                    33 2022-06-08                     17
+5               83                     2 2022-06-08                    207
+6                0                     0 2022-06-08                   1179
+  log_price long_stay old_listing
+1  4.709530         0           0
+2  3.663562         0           0
+3  4.189655         1           0
+4  5.003946         0           0
+5  3.784190         0           0
+6  6.620073         0           1</code></pre>
+</div>
+</div>
+<p>Split the data set into a training set and a test set.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>trainIndex <span class="ot">&lt;-</span> <span class="fu">createDataPartition</span>(alpha<span class="sc">$</span>log_price, <span class="at">p =</span> <span class="fl">0.7</span>, <span class="at">list =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>alpha_train <span class="ot">&lt;-</span> alpha[trainIndex, ]</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>alpha_test <span class="ot">&lt;-</span> alpha[<span class="sc">-</span>trainIndex, ]</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the dimensions of the training and testing sets</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Training set dimensions:"</span>, <span class="fu">dim</span>(alpha_train), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Training set dimensions: 34603 16 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Testing set dimensions:"</span>, <span class="fu">dim</span>(alpha_test), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Testing set dimensions: 14828 16 </code></pre>
+</div>
+</div>
+<section id="prediction-and-model-evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="prediction-and-model-evaluation">Prediction and Model Evaluation</h2>
+<p>RMSE or Root Mean Squared Error is a metric used to evaluate and compare different models. Mathematically,RMSE is the average deviation of the predictions from the observations.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cross validation and control parameters metric = 'RMSE'</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="co"># tuneLength = 6</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Neighborhood is not a continuous number because it's a</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="co"># zip code, but the original model treats it as such. This</span></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="co"># is incorrect and we must treat it as a factor/fixed</span></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a><span class="co"># effect.</span></span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2343</span>)</span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a>linearModelReg2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(log_price <span class="sc">~</span> room_type <span class="sc">+</span> long_stay <span class="sc">+</span> old_listing <span class="sc">+</span></span>
+<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a>    date <span class="sc">+</span> <span class="fu">as.factor</span>(neighbourhood) <span class="sc">+</span> reviews_per_month <span class="sc">+</span> calculated_host_listings_count <span class="sc">+</span></span>
+<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a>    availability_365 <span class="sc">+</span> number_of_reviews_ltm <span class="sc">+</span> time_since_last_review,</span>
+<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> alpha_train)</span>
+<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(linearModelReg2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = log_price ~ room_type + long_stay + old_listing + 
+    date + as.factor(neighbourhood) + reviews_per_month + calculated_host_listings_count + 
+    availability_365 + number_of_reviews_ltm + time_since_last_review, 
+    data = alpha_train)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.37128 -0.41062 -0.05824  0.35559  2.97020 
+
+Coefficients:
+                                 Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                     5.403e+00  2.130e-01  25.370  &lt; 2e-16 ***
+room_typeHotel room            -2.461e-01  8.680e-02  -2.835  0.00458 ** 
+room_typePrivate room          -9.006e-01  9.644e-03 -93.389  &lt; 2e-16 ***
+room_typeShared room           -1.185e+00  5.461e-02 -21.696  &lt; 2e-16 ***
+long_stay                      -4.210e-01  1.120e-02 -37.583  &lt; 2e-16 ***
+old_listing                    -1.467e-01  1.664e-02  -8.817  &lt; 2e-16 ***
+date2022-09-12                 -5.074e-02  8.670e-03  -5.853 4.87e-09 ***
+date2022-12-15                 -1.575e-01  9.809e-03 -16.061  &lt; 2e-16 ***
+date2023-03-16                  4.056e-02  9.725e-03   4.170 3.05e-05 ***
+as.factor(neighbourhood)76574  -1.677e-01  2.403e-01  -0.698  0.48522    
+as.factor(neighbourhood)78602  -8.940e-02  2.182e-01  -0.410  0.68206    
+as.factor(neighbourhood)78605  -4.542e-01  3.115e-01  -1.458  0.14474    
+as.factor(neighbourhood)78610  -1.162e-01  2.196e-01  -0.529  0.59684    
+as.factor(neighbourhood)78611   1.888e-01  2.148e-01   0.879  0.37939    
+as.factor(neighbourhood)78612  -4.083e-01  2.240e-01  -1.823  0.06837 .  
+as.factor(neighbourhood)78613  -3.573e-02  2.175e-01  -0.164  0.86951    
+as.factor(neighbourhood)78615  -5.058e-01  4.758e-01  -1.063  0.28769    
+as.factor(neighbourhood)78616  -7.141e-02  2.796e-01  -0.255  0.79843    
+as.factor(neighbourhood)78617  -3.945e-02  2.246e-01  -0.176  0.86059    
+as.factor(neighbourhood)78619   7.687e-02  2.169e-01   0.354  0.72305    
+as.factor(neighbourhood)78620   2.424e-01  2.147e-01   1.129  0.25904    
+as.factor(neighbourhood)78621  -1.430e-01  2.313e-01  -0.618  0.53649    
+as.factor(neighbourhood)78626  -1.441e-01  2.169e-01  -0.665  0.50633    
+as.factor(neighbourhood)78628  -8.775e-02  2.233e-01  -0.393  0.69435    
+as.factor(neighbourhood)78634  -1.427e-01  2.219e-01  -0.643  0.52008    
+as.factor(neighbourhood)78636  -3.323e-02  2.170e-01  -0.153  0.87829    
+as.factor(neighbourhood)78640  -9.208e-02  2.192e-01  -0.420  0.67436    
+as.factor(neighbourhood)78641   1.906e-01  2.168e-01   0.879  0.37942    
+as.factor(neighbourhood)78642  -6.700e-02  2.336e-01  -0.287  0.77423    
+as.factor(neighbourhood)78644  -1.074e-01  2.283e-01  -0.470  0.63804    
+as.factor(neighbourhood)78645   2.267e-01  2.145e-01   1.056  0.29075    
+as.factor(neighbourhood)78652  -6.866e-02  2.246e-01  -0.306  0.75982    
+as.factor(neighbourhood)78653  -2.700e-01  2.174e-01  -1.242  0.21426    
+as.factor(neighbourhood)78654   1.693e-01  2.144e-01   0.790  0.42982    
+as.factor(neighbourhood)78655  -6.927e-01  2.221e-01  -3.119  0.00182 ** 
+as.factor(neighbourhood)78656   5.950e-01  2.365e-01   2.516  0.01187 *  
+as.factor(neighbourhood)78660  -1.468e-01  2.157e-01  -0.681  0.49619    
+as.factor(neighbourhood)78662  -3.417e-01  2.855e-01  -1.197  0.23127    
+as.factor(neighbourhood)78663  -7.051e-02  4.074e-01  -0.173  0.86261    
+as.factor(neighbourhood)78664  -1.915e-01  2.160e-01  -0.887  0.37524    
+as.factor(neighbourhood)78666  -1.403e-01  2.158e-01  -0.650  0.51548    
+as.factor(neighbourhood)78669   3.282e-01  2.167e-01   1.514  0.12992    
+as.factor(neighbourhood)78676   1.433e-01  2.142e-01   0.669  0.50353    
+as.factor(neighbourhood)78681  -9.091e-02  2.227e-01  -0.408  0.68312    
+as.factor(neighbourhood)78701   3.525e-01  2.133e-01   1.653  0.09836 .  
+as.factor(neighbourhood)78702   2.515e-01  2.130e-01   1.181  0.23779    
+as.factor(neighbourhood)78703   1.662e-01  2.135e-01   0.778  0.43639    
+as.factor(neighbourhood)78704   1.215e-01  2.130e-01   0.570  0.56840    
+as.factor(neighbourhood)78705  -2.752e-01  2.136e-01  -1.288  0.19776    
+as.factor(neighbourhood)78717  -1.914e-01  2.203e-01  -0.869  0.38506    
+as.factor(neighbourhood)78719  -4.675e-01  2.404e-01  -1.945  0.05181 .  
+as.factor(neighbourhood)78721  -5.731e-02  2.138e-01  -0.268  0.78871    
+as.factor(neighbourhood)78722  -9.012e-02  2.146e-01  -0.420  0.67449    
+as.factor(neighbourhood)78723  -9.176e-02  2.137e-01  -0.429  0.66760    
+as.factor(neighbourhood)78724  -1.166e-01  2.154e-01  -0.541  0.58823    
+as.factor(neighbourhood)78725  -7.448e-03  2.181e-01  -0.034  0.97276    
+as.factor(neighbourhood)78726  -3.638e-01  2.538e-01  -1.434  0.15167    
+as.factor(neighbourhood)78727  -2.031e-01  2.155e-01  -0.942  0.34610    
+as.factor(neighbourhood)78728  -1.787e-01  2.170e-01  -0.824  0.41015    
+as.factor(neighbourhood)78729  -1.749e-01  2.151e-01  -0.813  0.41629    
+as.factor(neighbourhood)78730   2.721e-01  2.278e-01   1.195  0.23223    
+as.factor(neighbourhood)78731   2.066e-01  2.154e-01   0.959  0.33742    
+as.factor(neighbourhood)78732   6.069e-01  2.193e-01   2.767  0.00565 ** 
+as.factor(neighbourhood)78733   2.536e-01  2.180e-01   1.163  0.24468    
+as.factor(neighbourhood)78734   3.850e-01  2.139e-01   1.800  0.07190 .  
+as.factor(neighbourhood)78735  -4.293e-02  2.257e-01  -0.190  0.84917    
+as.factor(neighbourhood)78736   9.851e-02  2.176e-01   0.453  0.65079    
+as.factor(neighbourhood)78737   2.121e-01  2.151e-01   0.986  0.32409    
+as.factor(neighbourhood)78738   8.045e-02  2.199e-01   0.366  0.71450    
+as.factor(neighbourhood)78739   2.040e-01  2.239e-01   0.911  0.36221    
+as.factor(neighbourhood)78741  -1.376e-01  2.133e-01  -0.645  0.51866    
+as.factor(neighbourhood)78742  -2.667e-01  2.518e-01  -1.059  0.28957    
+as.factor(neighbourhood)78744  -1.188e-01  2.140e-01  -0.555  0.57878    
+as.factor(neighbourhood)78745  -4.727e-02  2.134e-01  -0.221  0.82472    
+as.factor(neighbourhood)78746   4.342e-01  2.147e-01   2.023  0.04312 *  
+as.factor(neighbourhood)78747  -6.315e-02  2.179e-01  -0.290  0.77199    
+as.factor(neighbourhood)78748  -1.377e-01  2.147e-01  -0.641  0.52121    
+as.factor(neighbourhood)78749   1.075e-01  2.159e-01   0.498  0.61867    
+as.factor(neighbourhood)78750  -2.838e-01  2.176e-01  -1.304  0.19213    
+as.factor(neighbourhood)78751  -2.522e-01  2.136e-01  -1.180  0.23789    
+as.factor(neighbourhood)78752  -3.945e-01  2.145e-01  -1.839  0.06586 .  
+as.factor(neighbourhood)78753  -2.075e-01  2.152e-01  -0.964  0.33502    
+as.factor(neighbourhood)78754  -1.364e-01  2.157e-01  -0.632  0.52711    
+as.factor(neighbourhood)78756  -2.259e-01  2.152e-01  -1.050  0.29388    
+as.factor(neighbourhood)78757  -1.768e-01  2.144e-01  -0.824  0.40975    
+as.factor(neighbourhood)78758  -1.874e-01  2.138e-01  -0.876  0.38083    
+as.factor(neighbourhood)78759  -1.179e-01  2.155e-01  -0.547  0.58448    
+reviews_per_month              -8.475e-02  3.259e-03 -26.004  &lt; 2e-16 ***
+calculated_host_listings_count -1.437e-03  1.032e-04 -13.925  &lt; 2e-16 ***
+availability_365                6.629e-04  2.868e-05  23.114  &lt; 2e-16 ***
+number_of_reviews_ltm          -9.201e-04  2.900e-04  -3.173  0.00151 ** 
+time_since_last_review          2.741e-05  1.088e-05   2.520  0.01176 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.6018 on 34511 degrees of freedom
+Multiple R-squared:  0.3723,    Adjusted R-squared:  0.3707 
+F-statistic: 224.9 on 91 and 34511 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">R2</span>(<span class="fu">predict</span>(linearModelReg2, alpha_train), alpha_train<span class="sc">$</span>log_price)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.3723109</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>LMsum <span class="ot">&lt;-</span> <span class="fu">summary</span>(linearModelReg2)</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>LMsum</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = log_price ~ room_type + long_stay + old_listing + 
+    date + as.factor(neighbourhood) + reviews_per_month + calculated_host_listings_count + 
+    availability_365 + number_of_reviews_ltm + time_since_last_review, 
+    data = alpha_train)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.37128 -0.41062 -0.05824  0.35559  2.97020 
+
+Coefficients:
+                                 Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                     5.403e+00  2.130e-01  25.370  &lt; 2e-16 ***
+room_typeHotel room            -2.461e-01  8.680e-02  -2.835  0.00458 ** 
+room_typePrivate room          -9.006e-01  9.644e-03 -93.389  &lt; 2e-16 ***
+room_typeShared room           -1.185e+00  5.461e-02 -21.696  &lt; 2e-16 ***
+long_stay                      -4.210e-01  1.120e-02 -37.583  &lt; 2e-16 ***
+old_listing                    -1.467e-01  1.664e-02  -8.817  &lt; 2e-16 ***
+date2022-09-12                 -5.074e-02  8.670e-03  -5.853 4.87e-09 ***
+date2022-12-15                 -1.575e-01  9.809e-03 -16.061  &lt; 2e-16 ***
+date2023-03-16                  4.056e-02  9.725e-03   4.170 3.05e-05 ***
+as.factor(neighbourhood)76574  -1.677e-01  2.403e-01  -0.698  0.48522    
+as.factor(neighbourhood)78602  -8.940e-02  2.182e-01  -0.410  0.68206    
+as.factor(neighbourhood)78605  -4.542e-01  3.115e-01  -1.458  0.14474    
+as.factor(neighbourhood)78610  -1.162e-01  2.196e-01  -0.529  0.59684    
+as.factor(neighbourhood)78611   1.888e-01  2.148e-01   0.879  0.37939    
+as.factor(neighbourhood)78612  -4.083e-01  2.240e-01  -1.823  0.06837 .  
+as.factor(neighbourhood)78613  -3.573e-02  2.175e-01  -0.164  0.86951    
+as.factor(neighbourhood)78615  -5.058e-01  4.758e-01  -1.063  0.28769    
+as.factor(neighbourhood)78616  -7.141e-02  2.796e-01  -0.255  0.79843    
+as.factor(neighbourhood)78617  -3.945e-02  2.246e-01  -0.176  0.86059    
+as.factor(neighbourhood)78619   7.687e-02  2.169e-01   0.354  0.72305    
+as.factor(neighbourhood)78620   2.424e-01  2.147e-01   1.129  0.25904    
+as.factor(neighbourhood)78621  -1.430e-01  2.313e-01  -0.618  0.53649    
+as.factor(neighbourhood)78626  -1.441e-01  2.169e-01  -0.665  0.50633    
+as.factor(neighbourhood)78628  -8.775e-02  2.233e-01  -0.393  0.69435    
+as.factor(neighbourhood)78634  -1.427e-01  2.219e-01  -0.643  0.52008    
+as.factor(neighbourhood)78636  -3.323e-02  2.170e-01  -0.153  0.87829    
+as.factor(neighbourhood)78640  -9.208e-02  2.192e-01  -0.420  0.67436    
+as.factor(neighbourhood)78641   1.906e-01  2.168e-01   0.879  0.37942    
+as.factor(neighbourhood)78642  -6.700e-02  2.336e-01  -0.287  0.77423    
+as.factor(neighbourhood)78644  -1.074e-01  2.283e-01  -0.470  0.63804    
+as.factor(neighbourhood)78645   2.267e-01  2.145e-01   1.056  0.29075    
+as.factor(neighbourhood)78652  -6.866e-02  2.246e-01  -0.306  0.75982    
+as.factor(neighbourhood)78653  -2.700e-01  2.174e-01  -1.242  0.21426    
+as.factor(neighbourhood)78654   1.693e-01  2.144e-01   0.790  0.42982    
+as.factor(neighbourhood)78655  -6.927e-01  2.221e-01  -3.119  0.00182 ** 
+as.factor(neighbourhood)78656   5.950e-01  2.365e-01   2.516  0.01187 *  
+as.factor(neighbourhood)78660  -1.468e-01  2.157e-01  -0.681  0.49619    
+as.factor(neighbourhood)78662  -3.417e-01  2.855e-01  -1.197  0.23127    
+as.factor(neighbourhood)78663  -7.051e-02  4.074e-01  -0.173  0.86261    
+as.factor(neighbourhood)78664  -1.915e-01  2.160e-01  -0.887  0.37524    
+as.factor(neighbourhood)78666  -1.403e-01  2.158e-01  -0.650  0.51548    
+as.factor(neighbourhood)78669   3.282e-01  2.167e-01   1.514  0.12992    
+as.factor(neighbourhood)78676   1.433e-01  2.142e-01   0.669  0.50353    
+as.factor(neighbourhood)78681  -9.091e-02  2.227e-01  -0.408  0.68312    
+as.factor(neighbourhood)78701   3.525e-01  2.133e-01   1.653  0.09836 .  
+as.factor(neighbourhood)78702   2.515e-01  2.130e-01   1.181  0.23779    
+as.factor(neighbourhood)78703   1.662e-01  2.135e-01   0.778  0.43639    
+as.factor(neighbourhood)78704   1.215e-01  2.130e-01   0.570  0.56840    
+as.factor(neighbourhood)78705  -2.752e-01  2.136e-01  -1.288  0.19776    
+as.factor(neighbourhood)78717  -1.914e-01  2.203e-01  -0.869  0.38506    
+as.factor(neighbourhood)78719  -4.675e-01  2.404e-01  -1.945  0.05181 .  
+as.factor(neighbourhood)78721  -5.731e-02  2.138e-01  -0.268  0.78871    
+as.factor(neighbourhood)78722  -9.012e-02  2.146e-01  -0.420  0.67449    
+as.factor(neighbourhood)78723  -9.176e-02  2.137e-01  -0.429  0.66760    
+as.factor(neighbourhood)78724  -1.166e-01  2.154e-01  -0.541  0.58823    
+as.factor(neighbourhood)78725  -7.448e-03  2.181e-01  -0.034  0.97276    
+as.factor(neighbourhood)78726  -3.638e-01  2.538e-01  -1.434  0.15167    
+as.factor(neighbourhood)78727  -2.031e-01  2.155e-01  -0.942  0.34610    
+as.factor(neighbourhood)78728  -1.787e-01  2.170e-01  -0.824  0.41015    
+as.factor(neighbourhood)78729  -1.749e-01  2.151e-01  -0.813  0.41629    
+as.factor(neighbourhood)78730   2.721e-01  2.278e-01   1.195  0.23223    
+as.factor(neighbourhood)78731   2.066e-01  2.154e-01   0.959  0.33742    
+as.factor(neighbourhood)78732   6.069e-01  2.193e-01   2.767  0.00565 ** 
+as.factor(neighbourhood)78733   2.536e-01  2.180e-01   1.163  0.24468    
+as.factor(neighbourhood)78734   3.850e-01  2.139e-01   1.800  0.07190 .  
+as.factor(neighbourhood)78735  -4.293e-02  2.257e-01  -0.190  0.84917    
+as.factor(neighbourhood)78736   9.851e-02  2.176e-01   0.453  0.65079    
+as.factor(neighbourhood)78737   2.121e-01  2.151e-01   0.986  0.32409    
+as.factor(neighbourhood)78738   8.045e-02  2.199e-01   0.366  0.71450    
+as.factor(neighbourhood)78739   2.040e-01  2.239e-01   0.911  0.36221    
+as.factor(neighbourhood)78741  -1.376e-01  2.133e-01  -0.645  0.51866    
+as.factor(neighbourhood)78742  -2.667e-01  2.518e-01  -1.059  0.28957    
+as.factor(neighbourhood)78744  -1.188e-01  2.140e-01  -0.555  0.57878    
+as.factor(neighbourhood)78745  -4.727e-02  2.134e-01  -0.221  0.82472    
+as.factor(neighbourhood)78746   4.342e-01  2.147e-01   2.023  0.04312 *  
+as.factor(neighbourhood)78747  -6.315e-02  2.179e-01  -0.290  0.77199    
+as.factor(neighbourhood)78748  -1.377e-01  2.147e-01  -0.641  0.52121    
+as.factor(neighbourhood)78749   1.075e-01  2.159e-01   0.498  0.61867    
+as.factor(neighbourhood)78750  -2.838e-01  2.176e-01  -1.304  0.19213    
+as.factor(neighbourhood)78751  -2.522e-01  2.136e-01  -1.180  0.23789    
+as.factor(neighbourhood)78752  -3.945e-01  2.145e-01  -1.839  0.06586 .  
+as.factor(neighbourhood)78753  -2.075e-01  2.152e-01  -0.964  0.33502    
+as.factor(neighbourhood)78754  -1.364e-01  2.157e-01  -0.632  0.52711    
+as.factor(neighbourhood)78756  -2.259e-01  2.152e-01  -1.050  0.29388    
+as.factor(neighbourhood)78757  -1.768e-01  2.144e-01  -0.824  0.40975    
+as.factor(neighbourhood)78758  -1.874e-01  2.138e-01  -0.876  0.38083    
+as.factor(neighbourhood)78759  -1.179e-01  2.155e-01  -0.547  0.58448    
+reviews_per_month              -8.475e-02  3.259e-03 -26.004  &lt; 2e-16 ***
+calculated_host_listings_count -1.437e-03  1.032e-04 -13.925  &lt; 2e-16 ***
+availability_365                6.629e-04  2.868e-05  23.114  &lt; 2e-16 ***
+number_of_reviews_ltm          -9.201e-04  2.900e-04  -3.173  0.00151 ** 
+time_since_last_review          2.741e-05  1.088e-05   2.520  0.01176 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.6018 on 34511 degrees of freedom
+Multiple R-squared:  0.3723,    Adjusted R-squared:  0.3707 
+F-statistic: 224.9 on 91 and 34511 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</section>
+<section id="print-the-lm-model-and-plot-the-diagnostic-plots" class="level2">
+<h2 class="anchored" data-anchor-id="print-the-lm-model-and-plot-the-diagnostic-plots">Print the lm model and plot the diagnostic plots</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>stargazer<span class="sc">::</span><span class="fu">stargazer</span>(linearModelReg2, <span class="at">type =</span> <span class="st">"html"</span>, <span class="at">summary =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">report =</span> <span class="st">"vc*stp"</span>, <span class="at">ci =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<table style="text-align:center">
+<tbody><tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="1" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+log_price
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+room_typeHotel room
+</td>
+<td>
+-0.246<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.416, -0.076)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -2.835
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.005
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+room_typePrivate room
+</td>
+<td>
+-0.901<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.920, -0.882)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -93.389
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+room_typeShared room
+</td>
+<td>
+-1.185<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-1.292, -1.078)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -21.696
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+long_stay
+</td>
+<td>
+-0.421<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.443, -0.399)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -37.583
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+old_listing
+</td>
+<td>
+-0.147<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.179, -0.114)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -8.817
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+date2022-09-12
+</td>
+<td>
+-0.051<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.068, -0.034)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -5.853
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+date2022-12-15
+</td>
+<td>
+-0.158<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.177, -0.138)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -16.061
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+date2023-03-16
+</td>
+<td>
+0.041<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.021, 0.060)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 4.170
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.00004
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)76574
+</td>
+<td>
+-0.168
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.639, 0.303)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.698
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.486
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78602
+</td>
+<td>
+-0.089
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.517, 0.338)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.410
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.683
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78605
+</td>
+<td>
+-0.454
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-1.065, 0.156)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -1.458
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.145
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78610
+</td>
+<td>
+-0.116
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.547, 0.314)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.529
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.597
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78611
+</td>
+<td>
+0.189
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.232, 0.610)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 0.879
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.380
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78612
+</td>
+<td>
+-0.408<sup>*</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.847, 0.031)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -1.823
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.069
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78613
+</td>
+<td>
+-0.036
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.462, 0.391)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.164
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.870
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78615
+</td>
+<td>
+-0.506
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-1.438, 0.427)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -1.063
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.288
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78616
+</td>
+<td>
+-0.071
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.619, 0.477)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.255
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.799
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78617
+</td>
+<td>
+-0.039
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.480, 0.401)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.176
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.861
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78619
+</td>
+<td>
+0.077
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.348, 0.502)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 0.354
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.724
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78620
+</td>
+<td>
+0.242
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.179, 0.663)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 1.129
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.260
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78621
+</td>
+<td>
+-0.143
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.596, 0.310)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.618
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.537
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78626
+</td>
+<td>
+-0.144
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.569, 0.281)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.665
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.507
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78628
+</td>
+<td>
+-0.088
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.525, 0.350)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.393
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.695
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78634
+</td>
+<td>
+-0.143
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.578, 0.292)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.643
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.521
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78636
+</td>
+<td>
+-0.033
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.459, 0.392)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.153
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.879
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78640
+</td>
+<td>
+-0.092
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.522, 0.337)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.420
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.675
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78641
+</td>
+<td>
+0.191
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.234, 0.615)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 0.879
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.380
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78642
+</td>
+<td>
+-0.067
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.525, 0.391)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.287
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.775
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78644
+</td>
+<td>
+-0.107
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.555, 0.340)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.470
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.639
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78645
+</td>
+<td>
+0.227
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.194, 0.647)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 1.056
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.291
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78652
+</td>
+<td>
+-0.069
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.509, 0.372)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.306
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.760
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78653
+</td>
+<td>
+-0.270
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.696, 0.156)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -1.242
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.215
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78654
+</td>
+<td>
+0.169
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.251, 0.589)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 0.790
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.430
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78655
+</td>
+<td>
+-0.693<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-1.128, -0.257)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -3.119
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.002
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78656
+</td>
+<td>
+0.595<sup>**</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.132, 1.058)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 2.516
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.012
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78660
+</td>
+<td>
+-0.147
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.569, 0.276)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.681
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.497
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78662
+</td>
+<td>
+-0.342
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.901, 0.218)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -1.197
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.232
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78663
+</td>
+<td>
+-0.071
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.869, 0.728)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.173
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.863
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78664
+</td>
+<td>
+-0.192
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.615, 0.232)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.887
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.376
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78666
+</td>
+<td>
+-0.140
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.563, 0.283)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.650
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.516
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78669
+</td>
+<td>
+0.328
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.097, 0.753)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 1.514
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.130
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78676
+</td>
+<td>
+0.143
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.277, 0.563)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 0.669
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.504
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78681
+</td>
+<td>
+-0.091
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.527, 0.346)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.408
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.684
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78701
+</td>
+<td>
+0.353<sup>*</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.065, 0.771)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 1.653
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.099
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78702
+</td>
+<td>
+0.252
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.166, 0.669)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 1.181
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.238
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78703
+</td>
+<td>
+0.166
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.252, 0.585)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 0.778
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.437
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78704
+</td>
+<td>
+0.122
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.296, 0.539)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 0.570
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.569
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78705
+</td>
+<td>
+-0.275
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.694, 0.144)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -1.288
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.198
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78717
+</td>
+<td>
+-0.191
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.623, 0.240)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.869
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.386
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78719
+</td>
+<td>
+-0.467<sup>*</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.939, 0.004)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -1.945
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.052
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78721
+</td>
+<td>
+-0.057
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.476, 0.362)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.268
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.789
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78722
+</td>
+<td>
+-0.090
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.511, 0.330)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.420
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.675
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78723
+</td>
+<td>
+-0.092
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.511, 0.327)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.429
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.668
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78724
+</td>
+<td>
+-0.117
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.539, 0.306)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.541
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.589
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78725
+</td>
+<td>
+-0.007
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.435, 0.420)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.034
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.973
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78726
+</td>
+<td>
+-0.364
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.861, 0.134)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -1.434
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.152
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78727
+</td>
+<td>
+-0.203
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.626, 0.219)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.942
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.347
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78728
+</td>
+<td>
+-0.179
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.604, 0.247)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.824
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.411
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78729
+</td>
+<td>
+-0.175
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.596, 0.247)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.813
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.417
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78730
+</td>
+<td>
+0.272
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.174, 0.719)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 1.195
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.233
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78731
+</td>
+<td>
+0.207
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.216, 0.629)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 0.959
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.338
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78732
+</td>
+<td>
+0.607<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.177, 1.037)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 2.767
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.006
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78733
+</td>
+<td>
+0.254
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.174, 0.681)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 1.163
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.245
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78734
+</td>
+<td>
+0.385<sup>*</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.034, 0.804)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 1.800
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.072
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78735
+</td>
+<td>
+-0.043
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.485, 0.400)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.190
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.850
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78736
+</td>
+<td>
+0.099
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.328, 0.525)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 0.453
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.651
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78737
+</td>
+<td>
+0.212
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.209, 0.634)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 0.986
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.325
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78738
+</td>
+<td>
+0.080
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.351, 0.511)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 0.366
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.715
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78739
+</td>
+<td>
+0.204
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.235, 0.643)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 0.911
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.363
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78741
+</td>
+<td>
+-0.138
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.556, 0.280)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.645
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.519
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78742
+</td>
+<td>
+-0.267
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.760, 0.227)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -1.059
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.290
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78744
+</td>
+<td>
+-0.119
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.538, 0.301)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.555
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.579
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78745
+</td>
+<td>
+-0.047
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.466, 0.371)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.221
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.825
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78746
+</td>
+<td>
+0.434<sup>**</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.013, 0.855)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 2.023
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.044
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78747
+</td>
+<td>
+-0.063
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.490, 0.364)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.290
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.772
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78748
+</td>
+<td>
+-0.138
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.558, 0.283)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.641
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.522
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78749
+</td>
+<td>
+0.107
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.316, 0.531)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 0.498
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.619
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78750
+</td>
+<td>
+-0.284
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.710, 0.143)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -1.304
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.193
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78751
+</td>
+<td>
+-0.252
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.671, 0.167)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -1.180
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.238
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78752
+</td>
+<td>
+-0.395<sup>*</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.815, 0.026)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -1.839
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.066
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78753
+</td>
+<td>
+-0.207
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.629, 0.214)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.964
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.336
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78754
+</td>
+<td>
+-0.136
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.559, 0.286)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.632
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.528
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78756
+</td>
+<td>
+-0.226
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.648, 0.196)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -1.050
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.294
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78757
+</td>
+<td>
+-0.177
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.597, 0.244)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.824
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.410
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78758
+</td>
+<td>
+-0.187
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.607, 0.232)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.876
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.381
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+as.factor(neighbourhood)78759
+</td>
+<td>
+-0.118
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.540, 0.305)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -0.547
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.585
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+reviews_per_month
+</td>
+<td>
+-0.085<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.091, -0.078)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -26.004
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+calculated_host_listings_count
+</td>
+<td>
+-0.001<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.002, -0.001)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -13.925
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+availability_365
+</td>
+<td>
+0.001<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.001, 0.001)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 23.114
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+number_of_reviews_ltm
+</td>
+<td>
+-0.001<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.001, -0.0004)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -3.173
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.002
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+time_since_last_review
+</td>
+<td>
+0.00003<sup>**</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.00001, 0.00005)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 2.520
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.012
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+5.403<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(4.985, 5.820)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 25.370
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+34,603
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.372
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+0.371
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+0.602 (df = 34511)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+F Statistic
+</td>
+<td>
+224.945<sup>***</sup> (df = 91; 34511)
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td style="text-align:right">
+<sup><em></em></sup><em>p&lt;0.1; <sup><strong></strong></sup><strong>p&lt;0.05; <sup></sup></strong></em>p&lt;0.01
+</td>
+</tr>
+
+</tbody></table>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plotting</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(linearModelReg2, <span class="at">col =</span> <span class="st">"#336699"</span>, <span class="at">pch =</span> <span class="dv">21</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Airbnb_Models_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(linearModelReg2, <span class="dv">4</span>, <span class="at">col =</span> <span class="st">"336699"</span>, <span class="at">pch =</span> <span class="dv">21</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Airbnb_Models_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(linearModelReg2, <span class="dv">5</span>, <span class="at">col =</span> <span class="st">"336699"</span>, <span class="at">pch =</span> <span class="dv">21</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Airbnb_Models_files/figure-html/unnamed-chunk-5-3.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>As we can see from the graphs above, the residuals vs fitted residuals plot shows an increased spread as the fitted values increase. This suggests potential heteroscedasticity.</p>
+<p>We can also note that the QQ plot of the standardized residuals suggests that the residuals are normally distributed, which is a major assumption behind regression.</p>
+</section>
+<section id="linear-regression-prediction-accuracy." class="level2">
+<h2 class="anchored" data-anchor-id="linear-regression-prediction-accuracy.">Linear Regression Prediction &amp; Accuracy.</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(linearModelReg2, <span class="at">newdata =</span> alpha_test)</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>rmse <span class="ot">&lt;-</span> <span class="fu">RMSE</span>(predictions, alpha_test<span class="sc">$</span>log_price)</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>error.rate.linear <span class="ot">&lt;-</span> rmse<span class="sc">/</span><span class="fu">mean</span>(alpha_test<span class="sc">$</span>log_price)</span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>linearr2 <span class="ot">&lt;-</span> <span class="fu">R2</span>(predictions, alpha_test<span class="sc">$</span>log_price)</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>lineardf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Algorithm =</span> <span class="st">"Linear Regression"</span>, <span class="at">RMSE =</span> rmse,</span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">R2 =</span> linearr2, <span class="at">Error =</span> error.rate.linear)</span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(lineardf) <span class="sc">%&gt;%</span></span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> F,</span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Algorithm </th>
+   <th style="text-align:right;"> RMSE </th>
+   <th style="text-align:right;"> R2 </th>
+   <th style="text-align:right;"> Error </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Linear Regression </td>
+   <td style="text-align:right;"> 0.6046127 </td>
+   <td style="text-align:right;"> 0.3763792 </td>
+   <td style="text-align:right;"> 0.1178848 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</section>
+<section id="polynominal-regression" class="level1">
+<h1>Polynominal Regression</h1>
+<p>Fit the squared polynomial</p>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">9999</span>)</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ONLY NUMERIC VARIABLES</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>poly_reg <span class="ot">&lt;-</span> <span class="fu">lm</span>(log_price <span class="sc">~</span> <span class="fu">poly</span>(number_of_reviews, <span class="dv">2</span>) <span class="sc">+</span> <span class="fu">poly</span>(reviews_per_month,</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>    <span class="dv">2</span>) <span class="sc">+</span> <span class="fu">poly</span>(availability_365, <span class="dv">2</span>) <span class="sc">+</span> <span class="fu">poly</span>(number_of_reviews_ltm,</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>    <span class="dv">2</span>) <span class="sc">+</span> <span class="fu">poly</span>(time_since_last_review, <span class="dv">2</span>) <span class="sc">+</span> <span class="fu">poly</span>(calculated_host_listings_count,</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>    <span class="dv">2</span>), <span class="at">data =</span> alpha_train)</span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>stargazer<span class="sc">::</span><span class="fu">stargazer</span>(poly_reg, <span class="at">type =</span> <span class="st">"html"</span>, <span class="at">summary =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">report =</span> <span class="st">"vc*stp"</span>, <span class="at">ci =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<table style="text-align:center">
+<tbody><tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="1" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+log_price
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+poly(number_of_reviews, 2)1
+</td>
+<td>
+-3.780<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-5.823, -1.737)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -3.627
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.0003
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+poly(number_of_reviews, 2)2
+</td>
+<td>
+-1.045
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-2.617, 0.528)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -1.302
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.193
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+poly(reviews_per_month, 2)1
+</td>
+<td>
+-24.189<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-26.784, -21.595)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -18.272
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+poly(reviews_per_month, 2)2
+</td>
+<td>
+10.460<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(8.122, 12.797)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 8.770
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+poly(availability_365, 2)1
+</td>
+<td>
+17.645<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(15.923, 19.366)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 20.088
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+poly(availability_365, 2)2
+</td>
+<td>
+-10.287<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-11.920, -8.653)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -12.344
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+poly(number_of_reviews_ltm, 2)1
+</td>
+<td>
+4.628<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1.635, 7.620)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 3.031
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.003
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+poly(number_of_reviews_ltm, 2)2
+</td>
+<td>
+-5.396<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-7.735, -3.058)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -4.522
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.00001
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+poly(time_since_last_review, 2)1
+</td>
+<td>
+-10.017<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-11.961, -8.073)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = -10.099
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+poly(time_since_last_review, 2)2
+</td>
+<td>
+9.589<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(8.010, 11.168)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 11.904
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+poly(calculated_host_listings_count, 2)1
+</td>
+<td>
+1.435<sup>*</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(-0.093, 2.963)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 1.841
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.066
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+poly(calculated_host_listings_count, 2)2
+</td>
+<td>
+3.296<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1.821, 4.772)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 4.379
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.00002
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+5.129<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(5.122, 5.137)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+t = 1,288.341
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+p = 0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+34,603
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.047
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+0.047
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+0.741 (df = 34590)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+F Statistic
+</td>
+<td>
+142.441<sup>***</sup> (df = 12; 34590)
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td style="text-align:right">
+<sup><em></em></sup><em>p&lt;0.1; <sup><strong></strong></sup><strong>p&lt;0.05; <sup></sup></strong></em>p&lt;0.01
+</td>
+</tr>
+
+</tbody></table>
+<section id="polynomial-regression-prediction-accuracy" class="level2">
+<h2 class="anchored" data-anchor-id="polynomial-regression-prediction-accuracy">Polynomial Regression Prediction &amp; Accuracy</h2>
+<p>Similar to the output of linear regression, the prediction matrix will be made for the polynomial regression.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>predictionpoly <span class="ot">=</span> <span class="fu">predict</span>(poly_reg, <span class="at">newdata =</span> alpha_test)</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>rmsepoly <span class="ot">=</span> <span class="fu">RMSE</span>(predictionpoly, alpha_test<span class="sc">$</span>log_price)</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>error.rate.poly <span class="ot">=</span> rmsepoly<span class="sc">/</span><span class="fu">mean</span>(alpha_test<span class="sc">$</span>log_price)</span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a>polyrsquare <span class="ot">=</span> <span class="fu">R2</span>(predictionpoly, alpha_test<span class="sc">$</span>log_price)</span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-10"><a href="#cb52-10" aria-hidden="true" tabindex="-1"></a>polydf <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Algorithm =</span> <span class="st">"Polynomial Regression"</span>, <span class="at">RMSE =</span> rmsepoly,</span>
+<span id="cb52-11"><a href="#cb52-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">R2 =</span> polyrsquare, <span class="at">Error =</span> error.rate.poly)</span>
+<span id="cb52-12"><a href="#cb52-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-13"><a href="#cb52-13" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(polydf) <span class="sc">%&gt;%</span></span>
+<span id="cb52-14"><a href="#cb52-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> F,</span>
+<span id="cb52-15"><a href="#cb52-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Algorithm </th>
+   <th style="text-align:right;"> RMSE </th>
+   <th style="text-align:right;"> R2 </th>
+   <th style="text-align:right;"> Error </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Polynomial Regression </td>
+   <td style="text-align:right;"> 0.7460255 </td>
+   <td style="text-align:right;"> 0.0505914 </td>
+   <td style="text-align:right;"> 0.1454569 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<p>Looking at the RMSE, R^2, and Error for both linear regression as well as polynomial regression, we can note that the results are fairly similar as they are relatively high.</p>
+</section>
+</section>
+<section id="spline-regression" class="level1">
+<h1>Spline Regression</h1>
+<p>We will run a splines model over the same dataset.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2121</span>)</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ONLY NUMERIC You dont only have to include bs() numerical</span></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="co"># variables in the spline models. We can keep all our</span></span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a><span class="co"># variables (including the correctly encoded neighbourhood</span></span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a><span class="co"># variable) and allow nonlinearity in our numeric</span></span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a><span class="co"># variables.</span></span>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a>knots <span class="ot">&lt;-</span> <span class="fu">quantile</span>(alpha_train<span class="sc">$</span>log_price, <span class="at">p =</span> <span class="fu">c</span>(<span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>))</span>
+<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a>splinemodel <span class="ot">&lt;-</span> <span class="fu">lm</span>(log_price <span class="sc">~</span> <span class="fu">as.factor</span>(room_type) <span class="sc">+</span> <span class="fu">bs</span>(reviews_per_month,</span>
+<span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">knots =</span> knots) <span class="sc">+</span> <span class="fu">bs</span>(number_of_reviews, <span class="at">knots =</span> knots) <span class="sc">+</span> <span class="fu">as.factor</span>(neighbourhood) <span class="sc">+</span></span>
+<span id="cb53-12"><a href="#cb53-12" aria-hidden="true" tabindex="-1"></a>    old_listing <span class="sc">+</span> long_stay <span class="sc">+</span> date <span class="sc">+</span> <span class="fu">bs</span>(availability_365, <span class="at">knots =</span> knots) <span class="sc">+</span></span>
+<span id="cb53-13"><a href="#cb53-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">bs</span>(number_of_reviews_ltm, <span class="at">knots =</span> knots) <span class="sc">+</span> <span class="fu">bs</span>(time_since_last_review,</span>
+<span id="cb53-14"><a href="#cb53-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">knots =</span> knots) <span class="sc">+</span> <span class="fu">bs</span>(calculated_host_listings_count, <span class="at">knots =</span> knots),</span>
+<span id="cb53-15"><a href="#cb53-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> alpha_train)</span>
+<span id="cb53-16"><a href="#cb53-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-17"><a href="#cb53-17" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(splinemodel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = log_price ~ as.factor(room_type) + bs(reviews_per_month, 
+    knots = knots) + bs(number_of_reviews, knots = knots) + as.factor(neighbourhood) + 
+    old_listing + long_stay + date + bs(availability_365, knots = knots) + 
+    bs(number_of_reviews_ltm, knots = knots) + bs(time_since_last_review, 
+    knots = knots) + bs(calculated_host_listings_count, knots = knots), 
+    data = alpha_train)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.41615 -0.40539 -0.05407  0.34532  3.07228 
+
+Coefficients:
+                                                     Estimate Std. Error
+(Intercept)                                         5.3792134  0.2203861
+as.factor(room_type)Hotel room                     -0.3605727  0.0858367
+as.factor(room_type)Private room                   -0.8909071  0.0096359
+as.factor(room_type)Shared room                    -1.1773756  0.0539330
+bs(reviews_per_month, knots = knots)1              -0.4892992  0.0366929
+bs(reviews_per_month, knots = knots)2              -0.3655288  0.0286488
+bs(reviews_per_month, knots = knots)3              -0.6455288  0.0280781
+bs(reviews_per_month, knots = knots)4              -0.6449917  0.1557321
+bs(reviews_per_month, knots = knots)5               0.0755165  0.6100122
+bs(reviews_per_month, knots = knots)6              -0.4778107  0.6296667
+bs(number_of_reviews, knots = knots)1              -0.0479441  0.0423866
+bs(number_of_reviews, knots = knots)2              -0.0941006  0.0400494
+bs(number_of_reviews, knots = knots)3              -0.0730581  0.0154092
+bs(number_of_reviews, knots = knots)4              -0.0316369  0.0631207
+bs(number_of_reviews, knots = knots)5              -0.7808847  0.1569783
+bs(number_of_reviews, knots = knots)6              -0.1255608  0.2026913
+as.factor(neighbourhood)76574                      -0.2421812  0.2361126
+as.factor(neighbourhood)78602                      -0.1373344  0.2144094
+as.factor(neighbourhood)78605                      -0.5130208  0.3060274
+as.factor(neighbourhood)78610                      -0.1732983  0.2157755
+as.factor(neighbourhood)78611                       0.1323485  0.2110986
+as.factor(neighbourhood)78612                      -0.4470516  0.2200643
+as.factor(neighbourhood)78613                      -0.1041554  0.2137110
+as.factor(neighbourhood)78615                      -0.5616567  0.4674482
+as.factor(neighbourhood)78616                      -0.1059527  0.2746774
+as.factor(neighbourhood)78617                      -0.0987159  0.2206997
+as.factor(neighbourhood)78619                       0.0373745  0.2131610
+as.factor(neighbourhood)78620                       0.1944609  0.2109992
+as.factor(neighbourhood)78621                      -0.1750050  0.2272609
+as.factor(neighbourhood)78626                      -0.1895112  0.2130603
+as.factor(neighbourhood)78628                      -0.1720386  0.2193843
+as.factor(neighbourhood)78634                      -0.2010237  0.2179579
+as.factor(neighbourhood)78636                      -0.0660985  0.2132378
+as.factor(neighbourhood)78640                      -0.1378318  0.2153200
+as.factor(neighbourhood)78641                       0.1330068  0.2129990
+as.factor(neighbourhood)78642                      -0.0958050  0.2295120
+as.factor(neighbourhood)78644                      -0.1388847  0.2242941
+as.factor(neighbourhood)78645                       0.1728989  0.2107697
+as.factor(neighbourhood)78652                      -0.1376484  0.2206447
+as.factor(neighbourhood)78653                      -0.3187763  0.2135624
+as.factor(neighbourhood)78654                       0.1073448  0.2106523
+as.factor(neighbourhood)78655                      -0.7261498  0.2183502
+as.factor(neighbourhood)78656                       0.5604226  0.2323163
+as.factor(neighbourhood)78660                      -0.2025816  0.2118708
+as.factor(neighbourhood)78662                      -0.4094499  0.2804415
+as.factor(neighbourhood)78663                      -0.0447672  0.4003278
+as.factor(neighbourhood)78664                      -0.2504831  0.2121645
+as.factor(neighbourhood)78666                      -0.1753296  0.2119985
+as.factor(neighbourhood)78669                       0.2888239  0.2129585
+as.factor(neighbourhood)78676                       0.0891710  0.2105611
+as.factor(neighbourhood)78681                      -0.1479016  0.2187784
+as.factor(neighbourhood)78701                       0.2896874  0.2095729
+as.factor(neighbourhood)78702                       0.2210550  0.2093157
+as.factor(neighbourhood)78703                       0.1253323  0.2098159
+as.factor(neighbourhood)78704                       0.0833790  0.2092758
+as.factor(neighbourhood)78705                      -0.3030571  0.2098931
+as.factor(neighbourhood)78717                      -0.2402679  0.2164991
+as.factor(neighbourhood)78719                      -0.5015836  0.2362358
+as.factor(neighbourhood)78721                      -0.0956249  0.2100900
+as.factor(neighbourhood)78722                      -0.1291548  0.2108118
+as.factor(neighbourhood)78723                      -0.1302354  0.2099287
+as.factor(neighbourhood)78724                      -0.1616294  0.2115949
+as.factor(neighbourhood)78725                      -0.0621808  0.2142757
+as.factor(neighbourhood)78726                      -0.3960774  0.2493965
+as.factor(neighbourhood)78727                      -0.2465976  0.2117481
+as.factor(neighbourhood)78728                      -0.2001818  0.2131846
+as.factor(neighbourhood)78729                      -0.2056913  0.2113379
+as.factor(neighbourhood)78730                       0.2259054  0.2237885
+as.factor(neighbourhood)78731                       0.1583853  0.2116333
+as.factor(neighbourhood)78732                       0.5482199  0.2154562
+as.factor(neighbourhood)78733                       0.1742375  0.2141744
+as.factor(neighbourhood)78734                       0.3342656  0.2101697
+as.factor(neighbourhood)78735                      -0.1080968  0.2217865
+as.factor(neighbourhood)78736                       0.0473864  0.2138080
+as.factor(neighbourhood)78737                       0.1815638  0.2112914
+as.factor(neighbourhood)78738                       0.0200065  0.2160669
+as.factor(neighbourhood)78739                       0.1161569  0.2199900
+as.factor(neighbourhood)78741                      -0.1711345  0.2095124
+as.factor(neighbourhood)78742                      -0.3826288  0.2475041
+as.factor(neighbourhood)78744                      -0.1586250  0.2101993
+as.factor(neighbourhood)78745                      -0.0964424  0.2096966
+as.factor(neighbourhood)78746                       0.3703882  0.2108904
+as.factor(neighbourhood)78747                      -0.1306988  0.2140914
+as.factor(neighbourhood)78748                      -0.1837055  0.2109217
+as.factor(neighbourhood)78749                       0.0656538  0.2121134
+as.factor(neighbourhood)78750                      -0.3407552  0.2137713
+as.factor(neighbourhood)78751                      -0.2769640  0.2099102
+as.factor(neighbourhood)78752                      -0.4299862  0.2107494
+as.factor(neighbourhood)78753                      -0.2620787  0.2114321
+as.factor(neighbourhood)78754                      -0.1980790  0.2118897
+as.factor(neighbourhood)78756                      -0.2567774  0.2114449
+as.factor(neighbourhood)78757                      -0.2084084  0.2106985
+as.factor(neighbourhood)78758                      -0.2267611  0.2100764
+as.factor(neighbourhood)78759                      -0.1894654  0.2117488
+old_listing                                        -0.0072358  0.0712324
+long_stay                                          -0.4977390  0.0117059
+date2022-09-12                                     -0.0409575  0.0086896
+date2022-12-15                                     -0.1434203  0.0097525
+date2023-03-16                                      0.0460650  0.0096322
+bs(availability_365, knots = knots)1                0.4769018  0.1128510
+bs(availability_365, knots = knots)2                0.1681111  0.1141442
+bs(availability_365, knots = knots)3                0.2174957  0.0189608
+bs(availability_365, knots = knots)4                0.1769699  0.0320921
+bs(availability_365, knots = knots)5                0.6578495  0.0321513
+bs(availability_365, knots = knots)6                0.3040946  0.0154620
+bs(number_of_reviews_ltm, knots = knots)1           0.0853860  0.1420862
+bs(number_of_reviews_ltm, knots = knots)2           0.0444043  0.0505453
+bs(number_of_reviews_ltm, knots = knots)3           0.1466869  0.0713109
+bs(number_of_reviews_ltm, knots = knots)4          -0.0004014  0.1075471
+bs(number_of_reviews_ltm, knots = knots)5          -0.6170916  0.3262690
+bs(number_of_reviews_ltm, knots = knots)6           0.4152968  0.4558713
+bs(time_since_last_review, knots = knots)1          0.0806936  0.0632834
+bs(time_since_last_review, knots = knots)2         -0.0468093  0.0484343
+bs(time_since_last_review, knots = knots)3          0.0008448  0.0205616
+bs(time_since_last_review, knots = knots)4          0.3714699  0.0879493
+bs(time_since_last_review, knots = knots)5         -1.0900043  0.0997204
+bs(time_since_last_review, knots = knots)6          1.6920586  0.1433729
+bs(calculated_host_listings_count, knots = knots)1 -0.0160509  0.0254941
+bs(calculated_host_listings_count, knots = knots)2 -0.1249498  0.0310956
+bs(calculated_host_listings_count, knots = knots)3 -0.0586339  0.0113139
+bs(calculated_host_listings_count, knots = knots)4 -0.1435738  0.0741609
+bs(calculated_host_listings_count, knots = knots)5 -1.1447493  0.2217378
+bs(calculated_host_listings_count, knots = knots)6  1.9391433  0.4443600
+                                                   t value Pr(&gt;|t|)    
+(Intercept)                                         24.408  &lt; 2e-16 ***
+as.factor(room_type)Hotel room                      -4.201 2.67e-05 ***
+as.factor(room_type)Private room                   -92.457  &lt; 2e-16 ***
+as.factor(room_type)Shared room                    -21.830  &lt; 2e-16 ***
+bs(reviews_per_month, knots = knots)1              -13.335  &lt; 2e-16 ***
+bs(reviews_per_month, knots = knots)2              -12.759  &lt; 2e-16 ***
+bs(reviews_per_month, knots = knots)3              -22.990  &lt; 2e-16 ***
+bs(reviews_per_month, knots = knots)4               -4.142 3.46e-05 ***
+bs(reviews_per_month, knots = knots)5                0.124 0.901478    
+bs(reviews_per_month, knots = knots)6               -0.759 0.447959    
+bs(number_of_reviews, knots = knots)1               -1.131 0.258014    
+bs(number_of_reviews, knots = knots)2               -2.350 0.018798 *  
+bs(number_of_reviews, knots = knots)3               -4.741 2.13e-06 ***
+bs(number_of_reviews, knots = knots)4               -0.501 0.616225    
+bs(number_of_reviews, knots = knots)5               -4.974 6.57e-07 ***
+bs(number_of_reviews, knots = knots)6               -0.619 0.535612    
+as.factor(neighbourhood)76574                       -1.026 0.305039    
+as.factor(neighbourhood)78602                       -0.641 0.521836    
+as.factor(neighbourhood)78605                       -1.676 0.093671 .  
+as.factor(neighbourhood)78610                       -0.803 0.421898    
+as.factor(neighbourhood)78611                        0.627 0.530695    
+as.factor(neighbourhood)78612                       -2.031 0.042216 *  
+as.factor(neighbourhood)78613                       -0.487 0.626002    
+as.factor(neighbourhood)78615                       -1.202 0.229551    
+as.factor(neighbourhood)78616                       -0.386 0.699695    
+as.factor(neighbourhood)78617                       -0.447 0.654671    
+as.factor(neighbourhood)78619                        0.175 0.860818    
+as.factor(neighbourhood)78620                        0.922 0.356734    
+as.factor(neighbourhood)78621                       -0.770 0.441268    
+as.factor(neighbourhood)78626                       -0.889 0.373756    
+as.factor(neighbourhood)78628                       -0.784 0.432935    
+as.factor(neighbourhood)78634                       -0.922 0.356376    
+as.factor(neighbourhood)78636                       -0.310 0.756582    
+as.factor(neighbourhood)78640                       -0.640 0.522095    
+as.factor(neighbourhood)78641                        0.624 0.532337    
+as.factor(neighbourhood)78642                       -0.417 0.676367    
+as.factor(neighbourhood)78644                       -0.619 0.535784    
+as.factor(neighbourhood)78645                        0.820 0.412039    
+as.factor(neighbourhood)78652                       -0.624 0.532733    
+as.factor(neighbourhood)78653                       -1.493 0.135535    
+as.factor(neighbourhood)78654                        0.510 0.610347    
+as.factor(neighbourhood)78655                       -3.326 0.000883 ***
+as.factor(neighbourhood)78656                        2.412 0.015856 *  
+as.factor(neighbourhood)78660                       -0.956 0.339000    
+as.factor(neighbourhood)78662                       -1.460 0.144294    
+as.factor(neighbourhood)78663                       -0.112 0.910962    
+as.factor(neighbourhood)78664                       -1.181 0.237767    
+as.factor(neighbourhood)78666                       -0.827 0.408225    
+as.factor(neighbourhood)78669                        1.356 0.175030    
+as.factor(neighbourhood)78676                        0.423 0.671939    
+as.factor(neighbourhood)78681                       -0.676 0.499024    
+as.factor(neighbourhood)78701                        1.382 0.166896    
+as.factor(neighbourhood)78702                        1.056 0.290937    
+as.factor(neighbourhood)78703                        0.597 0.550281    
+as.factor(neighbourhood)78704                        0.398 0.690325    
+as.factor(neighbourhood)78705                       -1.444 0.148786    
+as.factor(neighbourhood)78717                       -1.110 0.267098    
+as.factor(neighbourhood)78719                       -2.123 0.033741 *  
+as.factor(neighbourhood)78721                       -0.455 0.648996    
+as.factor(neighbourhood)78722                       -0.613 0.540109    
+as.factor(neighbourhood)78723                       -0.620 0.535012    
+as.factor(neighbourhood)78724                       -0.764 0.444955    
+as.factor(neighbourhood)78725                       -0.290 0.771672    
+as.factor(neighbourhood)78726                       -1.588 0.112263    
+as.factor(neighbourhood)78727                       -1.165 0.244197    
+as.factor(neighbourhood)78728                       -0.939 0.347734    
+as.factor(neighbourhood)78729                       -0.973 0.330420    
+as.factor(neighbourhood)78730                        1.009 0.312762    
+as.factor(neighbourhood)78731                        0.748 0.454227    
+as.factor(neighbourhood)78732                        2.544 0.010949 *  
+as.factor(neighbourhood)78733                        0.814 0.415919    
+as.factor(neighbourhood)78734                        1.590 0.111741    
+as.factor(neighbourhood)78735                       -0.487 0.625984    
+as.factor(neighbourhood)78736                        0.222 0.824603    
+as.factor(neighbourhood)78737                        0.859 0.390178    
+as.factor(neighbourhood)78738                        0.093 0.926226    
+as.factor(neighbourhood)78739                        0.528 0.597496    
+as.factor(neighbourhood)78741                       -0.817 0.414035    
+as.factor(neighbourhood)78742                       -1.546 0.122126    
+as.factor(neighbourhood)78744                       -0.755 0.450470    
+as.factor(neighbourhood)78745                       -0.460 0.645581    
+as.factor(neighbourhood)78746                        1.756 0.079045 .  
+as.factor(neighbourhood)78747                       -0.610 0.541547    
+as.factor(neighbourhood)78748                       -0.871 0.383779    
+as.factor(neighbourhood)78749                        0.310 0.756926    
+as.factor(neighbourhood)78750                       -1.594 0.110941    
+as.factor(neighbourhood)78751                       -1.319 0.187031    
+as.factor(neighbourhood)78752                       -2.040 0.041331 *  
+as.factor(neighbourhood)78753                       -1.240 0.215154    
+as.factor(neighbourhood)78754                       -0.935 0.349887    
+as.factor(neighbourhood)78756                       -1.214 0.224606    
+as.factor(neighbourhood)78757                       -0.989 0.322606    
+as.factor(neighbourhood)78758                       -1.079 0.280407    
+as.factor(neighbourhood)78759                       -0.895 0.370919    
+old_listing                                         -0.102 0.919090    
+long_stay                                          -42.520  &lt; 2e-16 ***
+date2022-09-12                                      -4.713 2.45e-06 ***
+date2022-12-15                                     -14.706  &lt; 2e-16 ***
+date2023-03-16                                       4.782 1.74e-06 ***
+bs(availability_365, knots = knots)1                 4.226 2.39e-05 ***
+bs(availability_365, knots = knots)2                 1.473 0.140815    
+bs(availability_365, knots = knots)3                11.471  &lt; 2e-16 ***
+bs(availability_365, knots = knots)4                 5.514 3.52e-08 ***
+bs(availability_365, knots = knots)5                20.461  &lt; 2e-16 ***
+bs(availability_365, knots = knots)6                19.667  &lt; 2e-16 ***
+bs(number_of_reviews_ltm, knots = knots)1            0.601 0.547880    
+bs(number_of_reviews_ltm, knots = knots)2            0.879 0.379676    
+bs(number_of_reviews_ltm, knots = knots)3            2.057 0.039693 *  
+bs(number_of_reviews_ltm, knots = knots)4           -0.004 0.997022    
+bs(number_of_reviews_ltm, knots = knots)5           -1.891 0.058585 .  
+bs(number_of_reviews_ltm, knots = knots)6            0.911 0.362304    
+bs(time_since_last_review, knots = knots)1           1.275 0.202278    
+bs(time_since_last_review, knots = knots)2          -0.966 0.333827    
+bs(time_since_last_review, knots = knots)3           0.041 0.967229    
+bs(time_since_last_review, knots = knots)4           4.224 2.41e-05 ***
+bs(time_since_last_review, knots = knots)5         -10.931  &lt; 2e-16 ***
+bs(time_since_last_review, knots = knots)6          11.802  &lt; 2e-16 ***
+bs(calculated_host_listings_count, knots = knots)1  -0.630 0.528965    
+bs(calculated_host_listings_count, knots = knots)2  -4.018 5.88e-05 ***
+bs(calculated_host_listings_count, knots = knots)3  -5.182 2.20e-07 ***
+bs(calculated_host_listings_count, knots = knots)4  -1.936 0.052879 .  
+bs(calculated_host_listings_count, knots = knots)5  -5.163 2.45e-07 ***
+bs(calculated_host_listings_count, knots = knots)6   4.364 1.28e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.591 on 34480 degrees of freedom
+Multiple R-squared:  0.3951,    Adjusted R-squared:  0.3929 
+F-statistic: 184.6 on 122 and 34480 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<section id="spline-regression-prediction-accuracy" class="level2">
+<h2 class="anchored" data-anchor-id="spline-regression-prediction-accuracy">Spline Regression Prediction &amp; Accuracy</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>predictionspline <span class="ot">&lt;-</span> <span class="fu">predict</span>(splinemodel, <span class="at">newdata =</span> alpha_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in bs(reviews_per_month, degree = 3L, knots = c(`25%` =
+4.60517018598809, : some 'x' values beyond boundary knots may cause
+ill-conditioned bases</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in bs(number_of_reviews_ltm, degree = 3L, knots = c(`25%` =
+4.60517018598809, : some 'x' values beyond boundary knots may cause
+ill-conditioned bases</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>rmsespline <span class="ot">&lt;-</span> <span class="fu">RMSE</span>(predictionspline, alpha_test<span class="sc">$</span>log_price)</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>error.rate.spline <span class="ot">&lt;-</span> rmsespline<span class="sc">/</span><span class="fu">mean</span>(alpha_test<span class="sc">$</span>log_price)</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>splinersquare <span class="ot">&lt;-</span> <span class="fu">R2</span>(predictionspline, alpha_test<span class="sc">$</span>log_price)</span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>splinedf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Algorithm =</span> <span class="st">"Spline Regression"</span>, <span class="at">RMSE =</span> rmsespline,</span>
+<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">R2 =</span> splinersquare, <span class="at">Error =</span> error.rate.spline)</span>
+<span id="cb58-9"><a href="#cb58-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-10"><a href="#cb58-10" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(splinedf) <span class="sc">%&gt;%</span></span>
+<span id="cb58-11"><a href="#cb58-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> F,</span>
+<span id="cb58-12"><a href="#cb58-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Algorithm </th>
+   <th style="text-align:right;"> RMSE </th>
+   <th style="text-align:right;"> R2 </th>
+   <th style="text-align:right;"> Error </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Spline Regression </td>
+   <td style="text-align:right;"> 0.5942247 </td>
+   <td style="text-align:right;"> 0.3976403 </td>
+   <td style="text-align:right;"> 0.1158594 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</section>
+<section id="bagging" class="level2">
+<h2 class="anchored" data-anchor-id="bagging">BAGGING</h2>
+</section>
+</section>
+<section id="we-deleted-the-neighorbohood-variable-as-it-took-too-long-to-run-as-it-was-encoded-as-a-categorical-variable-and-theres-79-different-neighborhoods." class="level1">
+<h1>We deleted the neighorbohood variable as it took too long to run as it was encoded as a categorical variable and there’s 79 different neighborhoods.</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>mod_bag <span class="ot">&lt;-</span> <span class="fu">train</span>(log_price <span class="sc">~</span> <span class="fu">as.factor</span>(room_type) <span class="sc">+</span> reviews_per_month <span class="sc">+</span></span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.factor</span>(long_stay) <span class="sc">+</span> <span class="fu">as.factor</span>(old_listing) <span class="sc">+</span> <span class="fu">as.factor</span>(date) <span class="sc">+</span></span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a>    minimum_nights <span class="sc">+</span> number_of_reviews <span class="sc">+</span> reviews_per_month <span class="sc">+</span></span>
+<span id="cb59-6"><a href="#cb59-6" aria-hidden="true" tabindex="-1"></a>    calculated_host_listings_count <span class="sc">+</span> availability_365 <span class="sc">+</span> number_of_reviews_ltm <span class="sc">+</span></span>
+<span id="cb59-7"><a href="#cb59-7" aria-hidden="true" tabindex="-1"></a>    time_since_last_review, <span class="at">data =</span> alpha_train, <span class="at">method =</span> <span class="st">"treebag"</span>,</span>
+<span id="cb59-8"><a href="#cb59-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">nbagg =</span> <span class="dv">200</span>)</span>
+<span id="cb59-9"><a href="#cb59-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-10"><a href="#cb59-10" aria-hidden="true" tabindex="-1"></a>mod_bag</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Bagged CART 
+
+34603 samples
+   11 predictor
+
+No pre-processing
+Resampling: Bootstrapped (25 reps) 
+Summary of sample sizes: 34603, 34603, 34603, 34603, 34603, 34603, ... 
+Resampling results:
+
+  RMSE       Rsquared   MAE      
+  0.6364544  0.2970746  0.4998706</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(mod_bag, <span class="at">newdata =</span> alpha_test)</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>rmse_bag <span class="ot">&lt;-</span> <span class="fu">RMSE</span>(pred, alpha_test<span class="sc">$</span>log_price)</span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>r2_bag <span class="ot">&lt;-</span> <span class="fu">R2</span>(pred, alpha_test<span class="sc">$</span>log_price)</span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>error_bag <span class="ot">&lt;-</span> rmse_bag<span class="sc">/</span><span class="fu">mean</span>(alpha_test<span class="sc">$</span>log_price)</span>
+<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a>bagdf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Algorithm =</span> <span class="st">"Bagging"</span>, <span class="at">RMSE =</span> rmse_bag, <span class="at">R2 =</span> r2_bag,</span>
+<span id="cb61-8"><a href="#cb61-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">Error =</span> error_bag)</span>
+<span id="cb61-9"><a href="#cb61-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-10"><a href="#cb61-10" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(bagdf) <span class="sc">%&gt;%</span></span>
+<span id="cb61-11"><a href="#cb61-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> F,</span>
+<span id="cb61-12"><a href="#cb61-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Algorithm </th>
+   <th style="text-align:right;"> RMSE </th>
+   <th style="text-align:right;"> R2 </th>
+   <th style="text-align:right;"> Error </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Bagging </td>
+   <td style="text-align:right;"> 0.6341104 </td>
+   <td style="text-align:right;"> 0.3154346 </td>
+   <td style="text-align:right;"> 0.1236362 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<section id="random-forest" class="level2">
+<h2 class="anchored" data-anchor-id="random-forest">Random Forest</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(randomForest)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>randomForest 4.7-1.1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Type rfNews() to see new features/changes/bug fixes.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'randomForest'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:gridExtra':
+
+    combine</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:psych':
+
+    outlier</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:dplyr':
+
+    combine</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:ggplot2':
+
+    margin</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the seed for reproducibility</span></span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Split the data into training and testing sets</span></span>
+<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a>trainIndex <span class="ot">&lt;-</span> <span class="fu">createDataPartition</span>(alpha<span class="sc">$</span>log_price, <span class="at">p =</span> <span class="fl">0.7</span>, <span class="at">list =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb70-6"><a href="#cb70-6" aria-hidden="true" tabindex="-1"></a>trainData <span class="ot">&lt;-</span> alpha[trainIndex, ]</span>
+<span id="cb70-7"><a href="#cb70-7" aria-hidden="true" tabindex="-1"></a>testData <span class="ot">&lt;-</span> alpha[<span class="sc">-</span>trainIndex, ]</span>
+<span id="cb70-8"><a href="#cb70-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-9"><a href="#cb70-9" aria-hidden="true" tabindex="-1"></a>rf.model <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(log_price <span class="sc">~</span> neighbourhood <span class="sc">+</span> number_of_reviews <span class="sc">+</span></span>
+<span id="cb70-10"><a href="#cb70-10" aria-hidden="true" tabindex="-1"></a>    reviews_per_month <span class="sc">+</span> availability_365 <span class="sc">+</span> number_of_reviews_ltm <span class="sc">+</span></span>
+<span id="cb70-11"><a href="#cb70-11" aria-hidden="true" tabindex="-1"></a>    time_since_last_review <span class="sc">+</span> long_stay <span class="sc">+</span> old_listing, <span class="at">data =</span> trainData,</span>
+<span id="cb70-12"><a href="#cb70-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">mtry =</span> <span class="dv">6</span>, <span class="at">importance =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb70-13"><a href="#cb70-13" aria-hidden="true" tabindex="-1"></a><span class="co"># rf.model&lt;-randomForest(log_price~., data = trainData,</span></span>
+<span id="cb70-14"><a href="#cb70-14" aria-hidden="true" tabindex="-1"></a><span class="co"># mtry = 4, importance = TRUE)</span></span>
+<span id="cb70-15"><a href="#cb70-15" aria-hidden="true" tabindex="-1"></a>rf.model</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+ randomForest(formula = log_price ~ neighbourhood + number_of_reviews +      reviews_per_month + availability_365 + number_of_reviews_ltm +      time_since_last_review + long_stay + old_listing, data = trainData,      mtry = 6, importance = TRUE) 
+               Type of random forest: regression
+                     Number of trees: 500
+No. of variables tried at each split: 6
+
+          Mean of squared residuals: 0.3694923
+                    % Var explained: 36.38</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># PREDICTING</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>rf.predict <span class="ot">&lt;-</span> <span class="fu">predict</span>(rf.model, <span class="at">newdata =</span> testData)</span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a><span class="co"># View(rf.predict)</span></span>
+<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a><span class="co"># RMSE</span></span>
+<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a>rmse <span class="ot">&lt;-</span> <span class="fu">RMSE</span>(testData<span class="sc">$</span>log_price, rf.predict)</span>
+<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Variable Importance Plot</span></span>
+<span id="cb72-9"><a href="#cb72-9" aria-hidden="true" tabindex="-1"></a><span class="fu">varImpPlot</span>(rf.model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Airbnb_Models_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co"># CALCULATING RESIDUALS</span></span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>residuals <span class="ot">&lt;-</span> testData<span class="sc">$</span>log_price <span class="sc">-</span> rf.predict</span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a><span class="co"># CALCULATING TOTAL SUM OF SQUARES (TSS)</span></span>
+<span id="cb73-5"><a href="#cb73-5" aria-hidden="true" tabindex="-1"></a>tss <span class="ot">&lt;-</span> <span class="fu">sum</span>((testData<span class="sc">$</span>log_price <span class="sc">-</span> <span class="fu">mean</span>(testData<span class="sc">$</span>log_price))<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb73-6"><a href="#cb73-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-7"><a href="#cb73-7" aria-hidden="true" tabindex="-1"></a><span class="co"># CALCULATING RESIDUAL SUM OF SQUARES (RSS)</span></span>
+<span id="cb73-8"><a href="#cb73-8" aria-hidden="true" tabindex="-1"></a>rss <span class="ot">&lt;-</span> <span class="fu">sum</span>(residuals<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb73-9"><a href="#cb73-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-10"><a href="#cb73-10" aria-hidden="true" tabindex="-1"></a><span class="co"># CALCULATING R-SQUARED (R^2)</span></span>
+<span id="cb73-11"><a href="#cb73-11" aria-hidden="true" tabindex="-1"></a>r_squared <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> (rss<span class="sc">/</span>tss)</span>
+<span id="cb73-12"><a href="#cb73-12" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"R-squared: "</span>, r_squared, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>R-squared:  0.3622712 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="co"># CALCULATING ADJUSTED R-SQUARED</span></span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(testData)  <span class="co"># number of observations</span></span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">length</span>(rf.model<span class="sc">$</span>terms) <span class="sc">-</span> <span class="dv">1</span>  <span class="co"># number of predictor variables</span></span>
+<span id="cb75-4"><a href="#cb75-4" aria-hidden="true" tabindex="-1"></a>adjusted_r_squared <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> (((<span class="dv">1</span> <span class="sc">-</span> r_squared) <span class="sc">*</span> (n <span class="sc">-</span> <span class="dv">1</span>))<span class="sc">/</span>(n <span class="sc">-</span> p <span class="sc">-</span></span>
+<span id="cb75-5"><a href="#cb75-5" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1</span>))</span>
+<span id="cb75-6"><a href="#cb75-6" aria-hidden="true" tabindex="-1"></a>error_rf <span class="ot">&lt;-</span> adjusted_r_squared<span class="sc">/</span><span class="fu">mean</span>(testData<span class="sc">$</span>log_price)</span>
+<span id="cb75-7"><a href="#cb75-7" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Adjusted R-squared: "</span>, adjusted_r_squared, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Adjusted R-squared:  0.3621852 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"RMSE: "</span>, rmse, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>RMSE:  0.604787 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Error:"</span>, error_rf, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Error: 0.07060894 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>rf_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Algorithm =</span> <span class="st">"Random Forest"</span>, <span class="at">RMSE =</span> rmse,</span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">R2 =</span> adjusted_r_squared, <span class="at">Error =</span> error_rf)</span>
+<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(rf_df) <span class="sc">%&gt;%</span></span>
+<span id="cb81-5"><a href="#cb81-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> F,</span>
+<span id="cb81-6"><a href="#cb81-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Algorithm </th>
+   <th style="text-align:right;"> RMSE </th>
+   <th style="text-align:right;"> R2 </th>
+   <th style="text-align:right;"> Error </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Random Forest </td>
+   <td style="text-align:right;"> 0.604787 </td>
+   <td style="text-align:right;"> 0.3621852 </td>
+   <td style="text-align:right;"> 0.0706089 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<p>XG Boost</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xgboost)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'xgboost'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:dplyr':
+
+    slice</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"clean_airbnb.csv"</span>)</span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a>xgboost_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(alpha, <span class="at">select =</span> <span class="sc">-</span><span class="fu">c</span>(id, host_id, longitude,</span>
+<span id="cb86-3"><a href="#cb86-3" aria-hidden="true" tabindex="-1"></a>    price, name, host_name, latitude, long_stay, old_listing,</span>
+<span id="cb86-4"><a href="#cb86-4" aria-hidden="true" tabindex="-1"></a>    last_review, neighbourhood))</span>
+<span id="cb86-5"><a href="#cb86-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Removed the unecessary columns</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(xgboost_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "X"                              "room_type"                     
+ [3] "minimum_nights"                 "number_of_reviews"             
+ [5] "reviews_per_month"              "calculated_host_listings_count"
+ [7] "availability_365"               "number_of_reviews_ltm"         
+ [9] "date"                           "time_since_last_review"        
+[11] "log_price"                     </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(xgboost_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   49431 obs. of  11 variables:
+ $ X                             : int  1 2 3 4 5 6 7 8 9 10 ...
+ $ room_type                     : chr  "Entire home/apt" "Private room" "Entire home/apt" "Entire home/apt" ...
+ $ minimum_nights                : int  2 1 30 3 3 4 30 3 30 29 ...
+ $ number_of_reviews             : int  601 264 118 278 48 124 16 148 11 47 ...
+ $ reviews_per_month             : num  3.72 1.78 0.78 2.12 0.32 0.99 0.12 1.3 0.07 0.32 ...
+ $ calculated_host_listings_count: int  1 1 1 1 1 1 2 12 1 1 ...
+ $ availability_365              : int  309 58 0 90 83 0 260 118 101 177 ...
+ $ number_of_reviews_ltm         : int  44 1 2 33 2 0 4 26 0 5 ...
+ $ date                          : chr  "2022-06-08" "2022-06-08" "2022-06-08" "2022-06-08" ...
+ $ time_since_last_review        : int  14 340 8 17 207 1179 40 23 514 39 ...
+ $ log_price                     : num  4.71 3.66 4.19 5 3.78 ...</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a>xgboost_d1 <span class="ot">&lt;-</span> <span class="fu">predict</span>(<span class="fu">dummyVars</span>(<span class="sc">~</span>room_type, xgboost_data), <span class="at">newdata =</span> xgboost_data)</span>
+<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a>xgboost_d2 <span class="ot">&lt;-</span> <span class="fu">predict</span>(<span class="fu">dummyVars</span>(<span class="sc">~</span><span class="fu">as.character</span>(date), xgboost_data),</span>
+<span id="cb91-3"><a href="#cb91-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">newdata =</span> xgboost_data)</span>
+<span id="cb91-4"><a href="#cb91-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb91-5"><a href="#cb91-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Changed room_type into a dummy variable as its a</span></span>
+<span id="cb91-6"><a href="#cb91-6" aria-hidden="true" tabindex="-1"></a><span class="co"># categorical variable and xgboost only works with matrix</span></span>
+<span id="cb91-7"><a href="#cb91-7" aria-hidden="true" tabindex="-1"></a><span class="co"># (numerical) data</span></span>
+<span id="cb91-8"><a href="#cb91-8" aria-hidden="true" tabindex="-1"></a>xgboost_data <span class="ot">&lt;-</span> <span class="fu">cbind</span>(xgboost_data, xgboost_d1, xgboost_d2)  <span class="co"># Combines the dataframe</span></span>
+<span id="cb91-9"><a href="#cb91-9" aria-hidden="true" tabindex="-1"></a>xgboost_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(xgboost_data, <span class="at">select =</span> <span class="sc">-</span><span class="fu">c</span>(room_type, date))  <span class="co"># Remove room_type</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="create-training-set-indices-with-80-of-data-we-are-using-the-caret-package-to-do-this" class="level2">
+<h2 class="anchored" data-anchor-id="create-training-set-indices-with-80-of-data-we-are-using-the-caret-package-to-do-this">Create training set indices with 80% of data: we are using the caret package to do this</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">100</span>)  <span class="co"># For reproducibility</span></span>
+<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create index for testing and training data</span></span>
+<span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a>inTrain <span class="ot">&lt;-</span> <span class="fu">createDataPartition</span>(<span class="at">y =</span> xgboost_data<span class="sc">$</span>log_price, <span class="at">p =</span> <span class="fl">0.8</span>,</span>
+<span id="cb92-4"><a href="#cb92-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">list =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb92-5"><a href="#cb92-5" aria-hidden="true" tabindex="-1"></a><span class="co"># subset xgboost_data to training</span></span>
+<span id="cb92-6"><a href="#cb92-6" aria-hidden="true" tabindex="-1"></a>train <span class="ot">&lt;-</span> xgboost_data[inTrain, ]</span>
+<span id="cb92-7"><a href="#cb92-7" aria-hidden="true" tabindex="-1"></a><span class="co"># subset the rest to test</span></span>
+<span id="cb92-8"><a href="#cb92-8" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> xgboost_data[<span class="sc">-</span>inTrain, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a>train_features <span class="ot">&lt;-</span> <span class="fu">subset</span>(train, <span class="at">select =</span> <span class="sc">-</span><span class="fu">c</span>(log_price)) <span class="sc">%&gt;%</span></span>
+<span id="cb93-2"><a href="#cb93-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data.frame</span>()</span>
+<span id="cb93-3"><a href="#cb93-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-4"><a href="#cb93-4" aria-hidden="true" tabindex="-1"></a>train_labels <span class="ot">&lt;-</span> train<span class="sc">$</span>log_price  <span class="co">#y_train</span></span>
+<span id="cb93-5"><a href="#cb93-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-6"><a href="#cb93-6" aria-hidden="true" tabindex="-1"></a>test_features <span class="ot">&lt;-</span> <span class="fu">subset</span>(test, <span class="at">select =</span> <span class="sc">-</span><span class="fu">c</span>(log_price)) <span class="sc">%&gt;%</span></span>
+<span id="cb93-7"><a href="#cb93-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data.frame</span>()</span>
+<span id="cb93-8"><a href="#cb93-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-9"><a href="#cb93-9" aria-hidden="true" tabindex="-1"></a>test_labels <span class="ot">&lt;-</span> test<span class="sc">$</span>log_price  <span class="co">#y_test</span></span>
+<span id="cb93-10"><a href="#cb93-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-11"><a href="#cb93-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-12"><a href="#cb93-12" aria-hidden="true" tabindex="-1"></a>dtrain <span class="ot">&lt;-</span> <span class="fu">xgb.DMatrix</span>(<span class="at">data =</span> <span class="fu">as.matrix</span>(train_features), <span class="at">label =</span> train_labels)</span>
+<span id="cb93-13"><a href="#cb93-13" aria-hidden="true" tabindex="-1"></a>params <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">objectives =</span> <span class="st">"reg:squarederror"</span>, <span class="at">eval_metric =</span> <span class="st">"rmse"</span>,</span>
+<span id="cb93-14"><a href="#cb93-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">nthread =</span> <span class="dv">4</span>, <span class="at">eta =</span> <span class="fl">0.01</span>, <span class="at">max_depth =</span> <span class="dv">4</span>, <span class="at">nrounds =</span> <span class="dv">10</span>, <span class="at">gamma =</span> <span class="dv">0</span>,</span>
+<span id="cb93-15"><a href="#cb93-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">min_child_weight =</span> <span class="dv">1</span>, <span class="at">subsample =</span> <span class="dv">1</span>, <span class="at">colsample_bytree =</span> <span class="fu">seq</span>(<span class="fl">0.5</span>,</span>
+<span id="cb93-16"><a href="#cb93-16" aria-hidden="true" tabindex="-1"></a>        <span class="fl">0.9</span>, <span class="at">length.out =</span> <span class="dv">5</span>))</span>
+<span id="cb93-17"><a href="#cb93-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-18"><a href="#cb93-18" aria-hidden="true" tabindex="-1"></a>bstDMatrix <span class="ot">&lt;-</span> <span class="fu">xgboost</span>(<span class="at">data =</span> dtrain, <span class="at">max.depth =</span> <span class="dv">2</span>, <span class="at">eta =</span> <span class="dv">1</span>,</span>
+<span id="cb93-19"><a href="#cb93-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">nthread =</span> <span class="dv">4</span>, <span class="at">nrounds =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] train-rmse:0.661981 
+[2] train-rmse:0.642699 
+[3] train-rmse:0.631045 
+[4] train-rmse:0.624855 
+[5] train-rmse:0.620416 
+[6] train-rmse:0.618705 
+[7] train-rmse:0.614898 
+[8] train-rmse:0.612492 
+[9] train-rmse:0.610592 
+[10]    train-rmse:0.609454 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>dtest <span class="ot">&lt;-</span> <span class="fu">xgb.DMatrix</span>(<span class="at">data =</span> <span class="fu">as.matrix</span>(test_features), <span class="at">label =</span> test_labels)</span>
+<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb95-3"><a href="#cb95-3" aria-hidden="true" tabindex="-1"></a>y_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(bstDMatrix, <span class="at">newdata =</span> dtest)</span>
+<span id="cb95-4"><a href="#cb95-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb95-5"><a href="#cb95-5" aria-hidden="true" tabindex="-1"></a>error <span class="ot">&lt;-</span> <span class="fu">RMSE</span>(test_labels, y_pred)</span>
+<span id="cb95-6"><a href="#cb95-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb95-7"><a href="#cb95-7" aria-hidden="true" tabindex="-1"></a>R2 <span class="ot">&lt;-</span> <span class="fu">R2</span>(test_labels, y_pred)</span>
+<span id="cb95-8"><a href="#cb95-8" aria-hidden="true" tabindex="-1"></a>xgb_error <span class="ot">&lt;-</span> R2<span class="sc">/</span><span class="fu">mean</span>(test<span class="sc">$</span>log_price)</span>
+<span id="cb95-9"><a href="#cb95-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb95-10"><a href="#cb95-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb95-11"><a href="#cb95-11" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"The RMSE is:"</span>, <span class="fu">mean</span>(error), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The RMSE is: 0.6045673 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"The R^2 is:"</span>, R2, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The R^2 is: 0.3592564 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"The error is:"</span>, xgb_error, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The error is: 0.07011091 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a>xg_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Algorithm =</span> <span class="st">"XG Boost"</span>, <span class="at">RMSE =</span> error, <span class="at">R2 =</span> R2,</span>
+<span id="cb101-2"><a href="#cb101-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">Error =</span> xgb_error)</span>
+<span id="cb101-3"><a href="#cb101-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb101-4"><a href="#cb101-4" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(xg_df) <span class="sc">%&gt;%</span></span>
+<span id="cb101-5"><a href="#cb101-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> F,</span>
+<span id="cb101-6"><a href="#cb101-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Algorithm </th>
+   <th style="text-align:right;"> RMSE </th>
+   <th style="text-align:right;"> R2 </th>
+   <th style="text-align:right;"> Error </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> XG Boost </td>
+   <td style="text-align:right;"> 0.6045673 </td>
+   <td style="text-align:right;"> 0.3592564 </td>
+   <td style="text-align:right;"> 0.0701109 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tree1 = rpart(log_price~.,data = testData, method =</span></span>
+<span id="cb102-2"><a href="#cb102-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 'class') rpart.plot(tree1,type = 4)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tree1_simpler &lt;- rpart(log_price ~ ., data = testData,</span></span>
+<span id="cb103-2"><a href="#cb103-2" aria-hidden="true" tabindex="-1"></a><span class="co"># method = 'class', control = rpart.control(cp = 0.1))</span></span>
+<span id="cb103-3"><a href="#cb103-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb103-4"><a href="#cb103-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the simpler tree rpart.plot(tree1_simpler)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="combine-the-three-data-frames-that-contain-the-different-model-matrix-and-comment-on-the-rmse-and-r2." class="level1">
+<h1>Combine the three Data Frames that contain the different model matrix and comment on the RMSE and R2.</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a>final_df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(lineardf, polydf, splinedf, bagdf, rf_df, xg_df)</span>
+<span id="cb104-2"><a href="#cb104-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb104-3"><a href="#cb104-3" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(final_df) <span class="sc">%&gt;%</span></span>
+<span id="cb104-4"><a href="#cb104-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> F,</span>
+<span id="cb104-5"><a href="#cb104-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Algorithm </th>
+   <th style="text-align:right;"> RMSE </th>
+   <th style="text-align:right;"> R2 </th>
+   <th style="text-align:right;"> Error </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Linear Regression </td>
+   <td style="text-align:right;"> 0.6046127 </td>
+   <td style="text-align:right;"> 0.3763792 </td>
+   <td style="text-align:right;"> 0.1178848 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Polynomial Regression </td>
+   <td style="text-align:right;"> 0.7460255 </td>
+   <td style="text-align:right;"> 0.0505914 </td>
+   <td style="text-align:right;"> 0.1454569 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Spline Regression </td>
+   <td style="text-align:right;"> 0.5942247 </td>
+   <td style="text-align:right;"> 0.3976403 </td>
+   <td style="text-align:right;"> 0.1158594 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Bagging </td>
+   <td style="text-align:right;"> 0.6341104 </td>
+   <td style="text-align:right;"> 0.3154346 </td>
+   <td style="text-align:right;"> 0.1236362 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Random Forest </td>
+   <td style="text-align:right;"> 0.6047870 </td>
+   <td style="text-align:right;"> 0.3621852 </td>
+   <td style="text-align:right;"> 0.0706089 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> XG Boost </td>
+   <td style="text-align:right;"> 0.6045673 </td>
+   <td style="text-align:right;"> 0.3592564 </td>
+   <td style="text-align:right;"> 0.0701109 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<p>Looking at the table in terms of test RMSE &amp; R-squared, we can note that the best model is Random Forest. After Random Forest, we see spline is the second best model.</p>
+<p>Our final models used the following variables:</p>
+<p>Room Type Reviews per month Number of Reviews Neighborhood Old Listing Long Stay Date Availability_365 Number of reviews LTM Time Since Last Review Calculated Host Listing Count</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
